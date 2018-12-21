@@ -61,3 +61,15 @@ h1 {
       margin: auto;
       width: 40%;
   }
+  img{
+    &.with_subtext{
+        margin-bottom: 5px;
+    }
+}
+table{
+    border-collapse: separate;
+    border-spacing: 50px;
+}
+td, th {
+    padding: 10px;
+}

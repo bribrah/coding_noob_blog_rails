@@ -1,9 +1,19 @@
 <% provide(:title, "Blog Index") %>
 <h1>Blog posts</h1>
-<ul>
-    <%  @posts.each do |post|%>
-        <li><%= post.created_at%> : <%= link_to  post.title , post_path(post) %></li>
-    <% end%>
-</ul>
+<table>
+    <tr>
+        <th>Date Created</th>
+        <th>Title</th>
+        <th></th>
+    </tr>
+    <%  @posts.each do |post| %>
+    <tr>
+        <td><%= post.created_at%></td>
+        <td><%= post.title %></td>
+        <td><%= link_to  "Edit Post", edit_post_path(post) %></td>
+        <td><%= link_to  "Delete Post", post_path(post), method: :delete, data:{ confirm: "Are you Sure?"} %></td>
+    </tr>
+    <% end %>
+</table>
 
 

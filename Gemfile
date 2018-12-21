@@ -10,6 +10,9 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'bootstrap-sass', '3.3.7'
 gem 'bootsnap'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'paperclip'
+gem 'slim'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

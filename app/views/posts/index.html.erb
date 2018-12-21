@@ -1,0 +1,9 @@
+<% provide(:title, "Blog Index") %>
+<h1>Blog posts</h1>
+<ul>
+    <%  @posts.each do |post|%>
+        <li><%= post.created_at%> : <%= link_to  post.title , post_path(post) %></li>
+    <% end%>
+</ul>
+
+

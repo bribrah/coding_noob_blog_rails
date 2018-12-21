@@ -3,7 +3,10 @@
 
 /* universal */
 .center{
-    text-align: center
+    text-align: center;
+    h1{
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -25,3 +28,36 @@ nav{
         font-size: 1.3em
     }
 }
+
+/* UNIVERSAL */
+body {
+    padding-top: 60px;
+  }
+  
+  section {
+    overflow: auto;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+
+  /* typography */
+h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+    &.with_subtext{
+        margin-bottom: 0px
+    }
+  }
+  p{
+      margin-top: 30px;
+      font-size: 1.5em;
+  }
+  i{
+      display: block;
+      margin: auto;
+      width: 40%;
+  }

@@ -2,13 +2,11 @@
 <h1>Blog posts</h1>
 <table>
     <tr>
-        <th>id</th>
         <th>Title</th>
         <th></th>
     </tr>
     <%  @posts.order(:id).each do |post| %>
     <tr>
-        <td><%= post.id%></td>
         <td><%= link_to  post.title, post_path(post) %></td>
         <td><%= link_to  "Edit Post", edit_post_path(post) %></td>
         <td><%= link_to  "Delete Post", post_path(post), method: :delete, data:{ confirm: "Are you Sure?"} %></td>

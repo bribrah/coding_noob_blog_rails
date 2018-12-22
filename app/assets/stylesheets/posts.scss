@@ -1,13 +1,2 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-img{
-    &.with_subtext{
-        margin-bottom: 5px;
-    }
-}
-table{
-    border-collapse: separate;
-}
-td, th {
-    padding: 7px;
-}

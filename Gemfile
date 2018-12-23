@@ -13,7 +13,7 @@ gem 'bootsnap'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
 gem 'slim'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk-s3', '~> 1.0.0.rc2'
 gem 'rails_12factor', group: :production
 
 

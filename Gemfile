@@ -13,6 +13,9 @@ gem 'bootsnap'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
 gem 'slim'
+gem 'aws-sdk', '~> 2'
+gem 'rails_12factor', group: :production
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

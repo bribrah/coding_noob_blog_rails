@@ -64,4 +64,5 @@ Rails.application.configure do
     bucket: 'codingnoobblog-images',
     s3_credentials: "#{Rails.root}/config/aws.yml"
     }
+
 end

@@ -60,8 +60,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.paperclip_defaults = {
     storage: :s3,
-    s3_region: 'us-west-1',
-    bucket:'codingnoob-assets',
+    s3_region: 'us-east-1',
+    bucket: 'codingnoobblog-images',
     s3_credentials: "#{Rails.root}/config/aws.yml"
     }
 end

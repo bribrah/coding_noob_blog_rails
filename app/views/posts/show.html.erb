@@ -1,2 +1,8 @@
 <h1><%= @post.title %></h1>
 <%= raw(@post.text) %>
+<footer>
+    <%= link_to  "<-- back to index", posts_path %>
+</footer>
+<footer>
+    <%= link_to  "edit post", edit_post_path(@post) %></li>
+</footer>

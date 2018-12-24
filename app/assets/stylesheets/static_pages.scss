@@ -47,6 +47,14 @@ body {
   div{
       &.project{
           border-top: 1px solid black;
+          h2{
+              text-align: center;
+          }
+          img{
+            width: 500px;
+            display: block;
+            margin: auto;
+          }
       }
   }
 h1 {
@@ -70,11 +78,6 @@ h1 {
   img{
     &.with_subtext{
         margin-bottom: -8px;
-    }
-    &.projects{
-        width: 500px;
-        display: block;
-        margin: auto;
     }
 }
 table{

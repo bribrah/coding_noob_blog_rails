@@ -1,10 +1,9 @@
 <% provide(:title, @post.title)%>
 <h1><%= @post.title %></h1>
 <%= raw(@post.text) %>
-<footer>
-    <%= link_to  "<-- back to index", posts_path %>
-</footer>
-<footer>
-    <%= link_to  "edit post", edit_post_path(@post) 
-    %></li>
-</footer>
+<div class="bottom-buttons">
+
+    <p><%= link_to  "<-- back to index", posts_path %></p>
+    <p><%= link_to  "edit post", edit_post_path(@post) %></p>
+</div>
+    

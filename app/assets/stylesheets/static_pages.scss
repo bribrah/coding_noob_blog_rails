@@ -1,8 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 $gray-medium-light: #eaeaea;
+
 /* universal */
 .center{
     text-align: center;
@@ -10,9 +10,18 @@ $gray-medium-light: #eaeaea;
         margin-bottom: 10px;
     }
 }
-html body{
+body {
+    padding-top: 60px;
     background-color: snow;
-}
+  }
+  
+  section {
+    overflow: auto;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
 
 
 /* navbar */
@@ -35,18 +44,7 @@ nav{
 }
 
 /* UNIVERSAL */
-body {
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
-  
-  section {
-    overflow: auto;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
+
 
   /* typography */
   div{
@@ -92,11 +90,7 @@ td, th {
     padding-right: 7px;
     padding-top: 0px 
 }
-body{
-    padding-bottom: 50px;
-}
-  
-/* footer */
+  /* footer */
 
 footer {
     margin-top: 45px;

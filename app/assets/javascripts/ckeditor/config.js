@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = function( config )
 {
-  config.extraPlugins = 'dialog,dialogui,eqneditor';
+  config.extraPlugins = 'youtube,eqneditor,image2,lineutils,widget,dialog,dialogui';
    // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Link tab of Image dialog.
    config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures";
 

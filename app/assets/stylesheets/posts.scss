@@ -1,8 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 .post_title{
-    font-size: 2em;
-    font-weight: 600
+    margin-bottom: 25px;
+    a{
+        font-weight: 600;
+        font-size: 2em;
+        color: white;
+        &:hover{
+            color: white;
+            text-decoration: none;
+        }
+    }
 }
 
 .bottom-buttons {

@@ -1,6 +1,6 @@
 <% @post = Post.find(params[:id])%>
 <% provide(:title, @post.title)%>
-<h1><%= @post.title %></h1>
+<h1 class="page-header"><%= @post.title %></h1>
 <%= raw(@post.text) %>
 <div class="bottom-buttons">
     <p><%= link_to  "<-- Back to Index", posts_path, class: "btn btn-primary" %></p>

@@ -1,19 +1,19 @@
 <% provide(:title, "Blog Index") %>
 <h1 class="page-header">Blog posts</h1>
-<%  @posts.order(:id).each do |post| %>
-<div class="row">
-    <div class="post_title">
-        <div class="btn btn-primary">
-            <%= link_to  post.title, post_path(post) %> 
-            <span class="badge"><%= post.comments.count %></span>
-        </div>
-        <span class="label label-default">
-            <%= post.created_at.to_formatted_s :long_ordinal %>
-        </span>
-    </td>
-</div>
-</div>
-<% end %>
+    <%  @posts.order(:id).each do |post| %>
+    <div class="row">
+        <div class="post_title">
+            <div class="btn btn-primary">
+                <%= link_to  post.title, post_path(post) %> 
+                <span class="badge"><%= post.comments.count %></span>
+            </div>
+            <span class="label label-default">
+                <%= post.created_at.to_formatted_s :long_ordinal %>
+            </span>
+        </td>
+    </div>
+    </div>
+    <% end %>
 
 
 

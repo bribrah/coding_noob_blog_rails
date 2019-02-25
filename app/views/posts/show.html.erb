@@ -2,10 +2,10 @@
 <h1><%= @post.title %></h1>
 <%= raw(@post.text) %>
 <div class="bottom-buttons">
-    <p><%= link_to  "<-- back to index", posts_path, class: "btn btn-primary" %></p>
+    <p><%= link_to  "<-- Back to Index", posts_path, class: "btn btn-primary" %></p>
 </div>
 
-<h3>Comments (<%= @post.comments.size %>)</h3>
+<h3 class="page-header">Comments (<%= @post.comments.size %>)</h3>
 <%= render partial: 'posts/comment', collection: @post.comments %>
 <%= render partial: 'comments/form' %>
     

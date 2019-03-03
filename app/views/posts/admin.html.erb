@@ -1,19 +1,19 @@
-<% provide(:title, "Blog Index") %>
-<h1>Blog posts</h1>
-<table class="index">
-    <tr>
-        <th class="post_title">Title</th>
-        <th></th>
-    </tr>
+<% provide(:title, "Admin Panel") %>
+<h1 class="page-header">Admin Panel</h1>
     <%  @posts.order(:id).each do |post| %>
-    <tr>
-        <td class="post_title"><%= link_to  post.title, post_path(post) %></td>
-        <td><%= link_to  "Edit Post", edit_post_path(post) %></td>
-        <td><%= link_to  "Delete Post", post_path(post), method: :delete, data:{ confirm: "Are you Sure?"} %></td>
-    </tr>
+    <div class="row">
+        <div class="post_title">
+            <div class="btn btn-primary">
+                <%= link_to  post.title, post_path(post) %> 
+                <span class="badge"><%= post.comments.count %></span>
+            </div>
+            <span class="label label-default">
+                <%= post.created_at.to_formatted_s :long_ordinal %>
+            </span>
+            <%= link_to  "Edit Post", edit_post_path(post), class:'btn btn-primary'%>
+            <%= link_to  "Delete Post", post_path(post), method: :delete, data:{ confirm: "Are you Sure?"}, class:'btn btn-primary'%>
+            
+        </td>
+    </div>
+    </div>
     <% end %>
-
-</table>
-<%= link_to  "Create New Post ", new_post_path %>
-
-

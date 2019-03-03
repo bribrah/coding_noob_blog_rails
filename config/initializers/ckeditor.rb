@@ -46,7 +46,7 @@ Ckeditor.setup do |config|
   # By default: nil (no limit)
   # config.assets_languages = ['en', 'uk']
   # config.assets_plugins = ['image', 'smiley']
-  config.assets_plugins = ['youtube,eqneditor,image2,lineutils,widget']
+  #config.assets_plugins = ['youtube,eqneditor,image2,lineutils,widget']
   #handle custom addons
   assets_root =  Rails.root.join('app','assets','javascripts')
   ckeditor_plugins_root = assets_root.join('ckeditor','plugins')

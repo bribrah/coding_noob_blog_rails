@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/override
+//= require ckeditor/init
 //= require bootstrap
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require ckeditor/override
-//= require ckeditor/init
 //= require_tree .

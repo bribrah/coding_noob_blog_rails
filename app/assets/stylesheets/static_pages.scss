@@ -66,6 +66,7 @@ h1 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: 600;
+    font-family: Palatino,Helveitca,Arial,sans-serif;
     &.with_subtext{
         margin-bottom: 0px
     }
@@ -130,4 +131,9 @@ footer {
 }
 .cke_dialog_background_cover {
   display:none;
+  }
+  .carousel-caption{
+    h3{
+      text-shadow: 4px 4px 2px black;
+    }
   }

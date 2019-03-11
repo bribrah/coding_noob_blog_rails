@@ -122,6 +122,7 @@ footer {
   }
   .carousel {
     max-height: 700px;
+    min-height: 700px;
     overflow: auto;
     
     .item img {

@@ -27,7 +27,8 @@
 }
 .post-links{
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    align-items: center;   
 }
 .post-links > * {
     flex: 1 0 45%;
@@ -52,8 +53,9 @@
     transform: translate(-50%, -50%);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     .badge{
-        font-size: 1.3vmin;
+        font-size: 1.5vmin;
     }
+
 
     
 }

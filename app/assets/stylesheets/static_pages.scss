@@ -136,11 +136,12 @@ footer {
     h3{
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       font-weight: 650;
+      font-size: 6vmin;
     }
   }
   .carousel-image{
-    max-height: 570px;
-    min-height: 570px;
+    max-height: 211vw;
+    min-height: 43vw;
     min-width: auto;
         
   }

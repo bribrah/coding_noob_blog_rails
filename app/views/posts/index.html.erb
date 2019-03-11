@@ -1,19 +1,24 @@
 <% provide(:title, "Blog Index") %>
 <h1 class="page-header">Blog posts</h1>
-    <%  @posts.order(:id).each do |post| %>
-    <div class="row">
-        <div class="post_title">
-            <div class="btn btn-primary">
-                <%= link_to  post.title, post_path(post) %> 
-                <span class="badge"><%= post.comments.count %></span>
-            </div>
-            <span class="label label-default">
+<div class="post-links">
+<%  @posts.order(:id).each do |post| %>
+<div class="post-link">
+    <% nokogiri_html_string = Nokogiri::HTML(post.text) %>
+    <% image_tag = nokogiri_html_string.css('img').first%>
+    <%= link_to  post_path(post) do %>
+        <%= raw(image_tag) %>
+    <% end%>
+    <div class="post-link-caption">
+        <%= post.title %>
+        <span class="badge"><%= post.comments.count %></span>
+        <span class="label label-default">
                 <%= post.created_at.to_formatted_s :long_ordinal %>
             </span>
-        </td>
     </div>
+</div>
+        <% end %>
     </div>
-    <% end %>
+        
 
 
 

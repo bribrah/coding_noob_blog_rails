@@ -5,8 +5,9 @@
 <div class="post-link">
     <% nokogiri_html_string = Nokogiri::HTML(post.text) %>
     <% image_tag = nokogiri_html_string.css('img').first%>
+    <% image_src = image_tag.attributes['src']%>
     <%= link_to  post_path(post) do %>
-        <%= raw(image_tag) %>
+        <img src="<%= image_src %>" alt="">
     <% end%>
     <div class="post-link-caption">
         <%= post.title %>

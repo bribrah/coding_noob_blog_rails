@@ -6,9 +6,9 @@
     <h1 class="display-3">Coding Noob Blog</h1>
     <p class="lead">Sharing my Journey from Coding Noob to Coding Savvy to Help you on your own Quest!</p>
     <hr class="my-2">
-
-
-
+    
+    
+    
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -21,34 +21,35 @@
             <% firstPost = false%>
             <% n = 1%>
             <% Post.order(:created_at).reverse.each do |post| %>
-                <% nokogiri_html_string = Nokogiri::HTML(post.text) %>
-                <% image_tag = nokogiri_html_string.css('img').first%>
-                
-                
-                <% if !firstPost %>
-                    <div class="item active">
-                        <a href=<%=  post_path(post)%>>
-                            <%= raw(image_tag) %>
-                            <div class="carousel-caption">
-                                <h3><%= post.title %></h3>
-                            </div>
-                        </a>
+            <% nokogiri_html_string = Nokogiri::HTML(post.text) %>
+            <% image_tag = nokogiri_html_string.css('img').first%>
+            <% image_src = image_tag.attributes['src']%>
+            
+            
+            <% if !firstPost %>
+            <div class="item active">
+                <a href=<%=  post_path(post)%>>
+                    <img class="carousel-image" src="<%= image_src %>" alt="">
+                    <div class="carousel-caption">
+                        <h3><%= post.title %></h3>
                     </div>
-                    <%  firstPost = true%>
-                <% else %>
-                    <div class="item">
-                        <a href=<%=  post_path(post)%>>
-                            <%= raw(image_tag) %>
-                            <div class="carousel-caption">
-                                <h3><%= post.title %></h3>
-                            </div>
-                        </a>
+                </a>
+            </div>
+            <%  firstPost = true%>
+            <% else %>
+            <div class="item">
+                <a href=<%=  post_path(post)%>>
+                    <img class="carousel-image" src="<%= image_src %>" alt="">
+                    <div class="carousel-caption">
+                        <h3><%= post.title %></h3>
                     </div>
-                    <% end%>
-                    <% if n == 3%>
-                        <% break %>
-                    <% end %>
-                    <% n = n+1%>
+                </a>
+            </div>
+            <% end%>
+            <% if n == 3%>
+            <% break %>
+            <% end %>
+            <% n = n+1%>
             <% end%>
         </div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">

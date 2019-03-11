@@ -27,11 +27,7 @@
 }
 .post-links{
     display: flex;
-    flex-wrap: wrap;
-    img{
-        width: 100%;
-    }
-    
+    flex-wrap: wrap;    
 }
 .post-links > * {
     flex: 1 0 45%;
@@ -42,18 +38,21 @@
     text-align: center;
     position: relative;
     font-weight: bolder;
-    font-size: 4.5vmin;
+    font-size: 4vmin;
     max-width: 50%;
+    img{
+        width: 100%;
+    }
 }
 .post-link-caption{
     position: absolute;
     color: white;
-    top: 75%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     .badge{
-        font-size: 1.5vmax;
+        font-size: 1.3vmin;
     }
 
     

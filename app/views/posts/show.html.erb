@@ -1,7 +1,7 @@
 <% @post = Post.find(params[:id])%>
 <% provide(:title, @post.title)%>
 <h1 class="page-header"><%= @post.title %></h1>
-<div class="container-fluid">
+<div class="container-fluid blog-post">
     <%= raw(@post.text) %>
 </div>
 <div class="bottom-buttons">

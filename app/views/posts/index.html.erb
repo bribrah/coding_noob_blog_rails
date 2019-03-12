@@ -8,14 +8,14 @@
     <% image_src = image_tag.attributes['src']%>
     <%= link_to  post_path(post) do %>
         <img src="<%= image_src %>" alt="">
-    <% end%>
-    <div class="post-link-caption">
-        <%= post.title %>
-        <span class="badge"><%= post.comments.count %></span>
-        <span class="label label-default">
+        <div class="post-link-caption">
+            <%= post.title %>
+            <span class="badge"><%= post.comments.count %></span>
+            <span class="label label-default">
                 <%= post.created_at.to_formatted_s :long_ordinal %>
             </span>
-    </div>
+        </div>
+        <% end%>
 </div>
         <% end %>
     </div>

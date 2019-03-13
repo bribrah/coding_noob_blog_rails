@@ -11,4 +11,13 @@
 <h3 class="page-header">Comments (<%= @post.comments.size %>)</h3>
 <%= render partial: 'posts/comment', collection: @post.comments %>
 <%= render partial: 'comments/form' %>
+<script>
+    if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+        const topImage = document.querySelector('img');
+        console.log("test")
+        topImage.style.width = '100%';
+        topImage.style.height = 'auto';
+    }
+
+</script>
     

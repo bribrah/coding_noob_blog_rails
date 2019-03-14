@@ -17,8 +17,10 @@
         console.log(window.innerWidth)
         allImages.forEach(image => {
             console.log(image.width);
-            image.width = (image.width / 1920) * image.width;
-            image.height = "auto";
+            image.style.width = `${.5 * image.width}px`;
+            image.style.height = 'auto';
+            console.log(image.width);
+            console.log(image.height)
         })
         const topImage = document.querySelector('img');
         console.log("test")

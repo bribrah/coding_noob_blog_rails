@@ -17,11 +17,8 @@
         console.log(window.innerWidth)
         allImages.forEach(image => {
             console.log(image.width);
-            if (image.width > window.innerWidth){
-                console.log("IF test");
-                image.width = '100%';
-                image.height = "auto";
-            }
+            image.width = (image.width / 1920) * image.width;
+            image.height = "auto";
         })
         const topImage = document.querySelector('img');
         console.log("test")
@@ -29,4 +26,4 @@
         topImage.style.height = 'auto';
     }
 </script>
-    
+

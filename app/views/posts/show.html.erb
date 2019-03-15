@@ -27,5 +27,31 @@
         topImage.style.width = '100%';
         topImage.style.height = 'auto';
     }
+
+
+    const javascriptHeader = document.querySelector('.javascriptHeader');
+    const text = javascriptHeader.querySelector('h1');
+    text.offsetParent = javascriptHeader;
+    if (javascriptHeader){
+        javascriptHeader.addEventListener('mousemove',shadow);
+        const walk = 200;
+        const width = javascriptHeader.offsetWidth;
+        const height = javascriptHeader.offsetHeight;
+
+        function shadow(e){
+            let {offsetX: x, offsetY: y} = e;
+            if (this !== e.target){
+                y =y + e.target.offsetTop;
+            }
+
+            const xWalk = (x / width * walk) - (walk / 2)
+            const yWalk = (y / height * walk) - (walk / 2)
+            text.style.textShadow = `${xWalk}px ${yWalk}px 0 blue`
+
+            <!-- console.log(xWalk,yWalk) -->
+            console.log(e.target)
+
+        }
+    }
 </script>
 

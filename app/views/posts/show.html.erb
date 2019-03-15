@@ -27,10 +27,12 @@
         topImage.style.width = '100%';
         topImage.style.height = 'auto';
     }
-
-
-    const javascriptHeader = document.querySelector('.javascriptHeader');
-    const text = javascriptHeader.querySelector('h1');
+if (typeof javascriptHeader == "undefined"){
+    let javascriptHeader
+    let text
+}
+    javascriptHeader  = document.querySelector('.javascriptHeader');
+    text = javascriptHeader.querySelector('h1');
     text.offsetParent = javascriptHeader;
     if (javascriptHeader){
         javascriptHeader.addEventListener('mousemove',shadow);

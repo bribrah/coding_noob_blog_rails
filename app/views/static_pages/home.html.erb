@@ -68,4 +68,15 @@
     <p class="lead">
         <%= link_to  "Checkout the Blog!", posts_path, class: "btn btn-lg btn-primary" %>
     </p>
+    <script>
+        const carouselContainer = document.querySelector(".carousel");
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        carouselImages.forEach(image => {
+            image.style.height = `${carouselContainer.offsetHeight}px`;
+            image.style.width = `${carouselContainer.offsetWidth}px`;
+            console.log(image.style.height);
+        })
+
+
+    </script>
 </div>
